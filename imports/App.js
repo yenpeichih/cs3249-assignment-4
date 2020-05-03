@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Datetime from 'react-datetime'
 import "./App.css"
+import "./react-datetime.css"
 import CanvasJSReact from './canvasjs.react';
 let CanvasJS = CanvasJSReact.CanvasJS;
 let CanvasJSChart = CanvasJSReact.CanvasJSChart;
@@ -23,6 +25,7 @@ class App extends React.Component {
             isRoom4:false,
             isRoom5:false,
             isRoom6:false,
+       
         }
         this.handleClick = this.handleClick.bind(this);
         this.addData = this.addData.bind(this);
@@ -40,6 +43,8 @@ class App extends React.Component {
         return dataPoints;
     }
 
+
+
     // This will sends information on the roomID to server and server will return appropriate data back 
     // Not sure why I need the setState part (because if I delete it, the line on the graph doesn't show up)
     handleClick(room){
@@ -55,6 +60,9 @@ class App extends React.Component {
                 this.setState(state=> ({
                     isRoom0: !this.state.isRoom0
                 }));
+
+               
+               
             }else if (room == 1){
                 this.dataPoints1 = this.addData(res);
                 this.setState(state=> ({
@@ -65,6 +73,8 @@ class App extends React.Component {
                 this.setState(state=> ({
                     isRoom2: !this.state.isRoom2
                 }));
+
+                console.log(this.state.isRoom2)
             }else if (room == 3){
                 this.dataPoints3 = this.addData(res);
                 this.setState(state=> ({
@@ -87,11 +97,40 @@ class App extends React.Component {
                 }));
             }
         });
+
+        
+
+    }
+
+    checkRooms() {
+        if(this.state.isRoom0 == false) {
+            this.dataPoints0 = [];
+        }
+        if(this.state.isRoom1 == false) {
+            this.dataPoints1 = [];
+        }
+        if(this.state.isRoom2 == false) {
+            this.dataPoints2 = [];
+        }
+        if(this.state.isRoom3 == false) {
+            this.dataPoints3 = [];
+        }
+        if(this.state.isRoom4 == false) {
+            this.dataPoints4 = [];
+        }
+        if(this.state.isRoom5 == false) {
+            this.dataPoints5 = [];
+        }
+        if(this.state.isRoom6 == false) {
+            this.dataPoints6 = [];
+        }
     }
 
     render(){
         // Set up what you need for CanvasJS to produce the graph
         // Refer to CanvasJS for more details 
+        this.checkRooms()
+        
         const options = {
             zoomEnabled:true,
             title: {
@@ -143,6 +182,8 @@ class App extends React.Component {
             ]
          }
 
+         console.log(this.dataPoints2)
+
         return(
             <div className ="container">
                 <h1>Rooms</h1>
@@ -162,19 +203,12 @@ class App extends React.Component {
 
                 <h1>Inputs</h1>
                 <div className ="inputs">
-                    <div className ="start">
-                        <label for="Start">Start: </label>
-                        <input type="date" id="startdate" name="startdate" max="2013-10-02"/>
-                        <input type="time" id="starttime" name="starttime"/>
-                    </div>
-                    <div className="end">
-                        <label for="End">End: </label>
-                        <input type="date" id="enddate" name="enddate" max="2013-11-07"/>
-                        <input type="time" id="endtime" name="endtime"/>
-                    </div>
+                    <h1>Start Date-Time</h1>
+                    <Datetime className="start" />
+                    <h1>End Date-Time</h1>
+                    <Datetime className="end"/>
                     <input type="range" id="points" name="points" min="0" max="10"/>
 
-                   
                 </div>
             </div>
         )
