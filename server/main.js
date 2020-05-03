@@ -30,6 +30,12 @@ function handleInfo(id) {
   things = info;
 }
 
+function handleStart(date) {
+  let filter = Data.find({'timestamp':date}).fetch();
+
+  let info = parseData(filter);
+}
+
 Meteor.methods({
   // Return data to Client side when it calls
   "retrieveData": function() {
@@ -38,6 +44,9 @@ Meteor.methods({
   // Retrieve data from Client (EG: about what room is clicked etc)
   getInfo(id) {
     handleInfo(id)
+  },
+  getDateInfo(start) {
+    handleStart(start)
   }
 })
 
