@@ -1,22 +1,65 @@
-.circle {
-  width: 50px;
-  height: 50px;
-  -webkit-border-radius: 25px;
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  background: black;
+.squareRoom0 {
+  position: relative;
+  left: 400px;
+  width: 300px;
+  height: 220px;
   font-size: large;
   color: white;
   text-align: center;
-  display:inline-block;
-  margin-bottom: 50px;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 
-.inputs{
-  float:left
+.squareRoomOthers {
+  position: relative;
+  left: 400px;
+  width: 100px;
+  height: 160px;
+  font-size: large;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
+.squareTemp1 {
+  background: rgb(180, 210, 255);
+}
 
+.squareTemp2 {
+  background: rgb(130, 170, 255);
+}
 
+.squareTemp3 {
+  background: rgb(90, 140, 250);
+}
 
+.squareTemp4 {
+  background: rgb(60, 120, 255);
+}
+
+.squareTemp5 {
+  background: rgb(30, 100, 240);
+}
+
+.squareTemp6 {
+  background: rgb(0, 70, 210);
+}
+
+.temp {
+  font-size: small;
+  color: black;
+  position: relative;
+  left: 400px;
+  display: inline-block;
+  margin-bottom: 30px;
+  margin-right: 69px;
+}
+
+.inputs {
+  float: left;
+}
