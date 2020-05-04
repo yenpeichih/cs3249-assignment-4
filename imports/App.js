@@ -246,7 +246,7 @@ class App extends React.Component {
 
     return (
       <div className="container">
-        <h1>Rooms</h1>
+        <h1>Floor Plan</h1>
         <div className="rooms">
           <div
             className={this.setColor(this.averageTemp0, 0)}
