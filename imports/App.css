@@ -50,6 +50,44 @@
   background: rgb(0, 70, 210);
 }
 
+.label0 {
+  color: rgb(49, 98, 231);
+  position: relative;
+  left: 410px;
+}
+
+.label {
+  position: relative;
+  left: 410px;
+  display: inline-block;
+  margin-bottom: 0px;
+  margin-right: 100px;
+}
+
+.label1 {
+  color: rgb(185, 29, 29);
+}
+
+.label2 {
+  color: rgb(13, 148, 65);
+}
+
+.label3 {
+  color: rgb(7, 190, 177);
+}
+
+.label4 {
+  color: rgb(126, 5, 207);
+}
+
+.label5 {
+  color: rgb(9, 157, 205);
+}
+
+.label6 {
+  color: rgb(216, 150, 29);
+}
+
 .temp {
   font-size: small;
   color: black;

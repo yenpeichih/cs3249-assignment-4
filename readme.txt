@@ -22,3 +22,10 @@ tests/-----------------------> contains default test code
     -main.js-----------------> default test code testing the client and server
 roomtemperature.json---------> json file containing all the temperature data in documents
 xstate.js--------------------> statechart indicated in xstate form
+
+
+
+References:
+Time series graph implemented using CanvasJS - https://canvasjs.com/react-charts
+
+Date and time inputs implmented with npm react-datetime package - https://www.npmjs.com/package/react-datetime

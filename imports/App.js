@@ -248,61 +248,55 @@ class App extends React.Component {
       <div className="container">
         <h1>Floor Plan</h1>
         <div className="rooms">
+          <div className="label0">R0</div>
           <div
             className={this.setColor(this.averageTemp0, 0)}
             id="room0"
             onClick={() => this.handleClick(0)}
-          >
-            0
-          </div>
+          ></div>
           <br></br>
           <div className="temp">
             Average: <br></br>
             {this.averageTemp0}
           </div>
           <br></br>
+          <div className="label label1">R1</div>
+          <div className="label label2">R2</div>
+          <div className="label label3">R3</div>
+          <div className="label label4">R4</div>
+          <div className="label label5">R5</div>
+          <div className="label label6">R6</div>
+          <br></br>
           <div
             className={this.setColor(this.averageTemp1, 1)}
             id="room1"
             onClick={() => this.handleClick(1)}
-          >
-            1
-          </div>
+          ></div>
           <div
             className={this.setColor(this.averageTemp2, 2)}
             id="room2"
             onClick={() => this.handleClick(2)}
-          >
-            2
-          </div>
+          ></div>
           <div
             className={this.setColor(this.averageTemp3, 3)}
             id="room3"
             onClick={() => this.handleClick(3)}
-          >
-            3
-          </div>
+          ></div>
           <div
             className={this.setColor(this.averageTemp4, 4)}
             id="room4"
             onClick={() => this.handleClick(4)}
-          >
-            4
-          </div>
+          ></div>
           <div
             className={this.setColor(this.averageTemp5, 5)}
             id="room5"
             onClick={() => this.handleClick(5)}
-          >
-            5
-          </div>
+          ></div>
           <div
             className={this.setColor(this.averageTemp6, 6)}
             id="room6"
             onClick={() => this.handleClick(6)}
-          >
-            6
-          </div>
+          ></div>
           <br></br>
           <div className="temp">
             Average: <br></br>
