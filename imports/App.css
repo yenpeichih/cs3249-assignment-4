@@ -1,6 +1,6 @@
 .squareRoom0 {
   position: relative;
-  left: 400px;
+  left: 410px;
   width: 300px;
   height: 220px;
   font-size: large;
@@ -14,7 +14,7 @@
 
 .squareRoomOthers {
   position: relative;
-  left: 400px;
+  left: 410px;
   width: 100px;
   height: 160px;
   font-size: large;
@@ -54,7 +54,7 @@
   font-size: small;
   color: black;
   position: relative;
-  left: 400px;
+  left: 410px;
   display: inline-block;
   margin-bottom: 30px;
   margin-right: 69px;
