@@ -340,6 +340,7 @@ class App extends React.Component {
           <Datetime className="start" />
           <h1>End Date-Time</h1>
           <Datetime className="end" />
+          Sample Points
           <input type="range" id="points" name="points" min="0" max="10" />
         </div>
       </div>
